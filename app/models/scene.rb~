@@ -1,0 +1,6 @@
+class Scene < ActiveRecord::Base
+         attr_accessor :recit, :lieu, :debut, :fin
+     
+	 has_and_belongs_to_many :personnes
+         belongs_to :chapitres
+end
