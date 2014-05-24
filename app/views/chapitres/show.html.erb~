@@ -10,12 +10,10 @@
   <%= @chapitre.titre %>
 </p>
  
- <% Anecdote.all.each do |tag| %>
-	<label>
-	  <%= label_tag "chapitre[tag_ids][]",
- 	tag.sujet %>
-       </label>
-   <% end %>
+<p>
+  <strong>Sujet:</strong>
+  <%= @chapitre.anecdotes.first.sujet %>
+</p>
   
 <%= link_to 'Edit', edit_chapitre_path(@chapitre) %> |
 <%= link_to 'Back', chapitres_path %>

@@ -4,8 +4,10 @@ one:
   texte: MyText
   sujet: MyString
   theme: MyString
+  chapitre_id: 1
 
 two:
   texte: MyText
   sujet: MyString
   theme: MyString
+  chapitre_id: 1

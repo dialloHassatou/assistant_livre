@@ -18,7 +18,7 @@ class AnecdotesControllerTest < ActionController::TestCase
 
   test "should create anecdote" do
     assert_difference('Anecdote.count') do
-      post :create, anecdote: { sujet: @anecdote.sujet, texte: @anecdote.texte, theme: @anecdote.theme }
+      post :create, anecdote: { chapitre_id: @anecdote.chapitre_id, sujet: @anecdote.sujet, texte: @anecdote.texte, theme: @anecdote.theme }
     end
 
     assert_redirected_to anecdote_path(assigns(:anecdote))
@@ -35,7 +35,7 @@ class AnecdotesControllerTest < ActionController::TestCase
   end
 
   test "should update anecdote" do
-    patch :update, id: @anecdote, anecdote: { sujet: @anecdote.sujet, texte: @anecdote.texte, theme: @anecdote.theme }
+    patch :update, id: @anecdote, anecdote: { chapitre_id: @anecdote.chapitre_id, sujet: @anecdote.sujet, texte: @anecdote.texte, theme: @anecdote.theme }
     assert_redirected_to anecdote_path(assigns(:anecdote))
   end
 
