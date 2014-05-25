@@ -15,7 +15,6 @@ class PersonnesController < ApplicationController
   # GET /personnes/new
   def new
     @personne = Personne.new
-    @scenes = Scene.all
   end
 
   # GET /personnes/1/edit

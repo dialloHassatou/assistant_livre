@@ -5,9 +5,11 @@ one:
   lieu: MyString
   debut: 2014-05-24
   fin: 2014-05-24
+  chapitre_id: 1
 
 two:
   recit: MyText
   lieu: MyString
   debut: 2014-05-24
   fin: 2014-05-24
+  chapitre_id: 1

@@ -18,7 +18,7 @@ class ScenesControllerTest < ActionController::TestCase
 
   test "should create scene" do
     assert_difference('Scene.count') do
-      post :create, scene: { debut: @scene.debut, fin: @scene.fin, lieu: @scene.lieu, recit: @scene.recit }
+      post :create, scene: { chapitre_id: @scene.chapitre_id, debut: @scene.debut, fin: @scene.fin, lieu: @scene.lieu, recit: @scene.recit }
     end
 
     assert_redirected_to scene_path(assigns(:scene))
@@ -35,7 +35,7 @@ class ScenesControllerTest < ActionController::TestCase
   end
 
   test "should update scene" do
-    patch :update, id: @scene, scene: { debut: @scene.debut, fin: @scene.fin, lieu: @scene.lieu, recit: @scene.recit }
+    patch :update, id: @scene, scene: { chapitre_id: @scene.chapitre_id, debut: @scene.debut, fin: @scene.fin, lieu: @scene.lieu, recit: @scene.recit }
     assert_redirected_to scene_path(assigns(:scene))
   end
 

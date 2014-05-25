@@ -1,4 +1,6 @@
 AssistantLivre::Application.routes.draw do
+  resources :relationships
+
   get "page/Acceuil"
   resources :personnes
 
