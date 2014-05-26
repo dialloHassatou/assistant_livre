@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524213156) do
+ActiveRecord::Schema.define(version: 20140525140658) do
 
   create_table "anecdotes", force: true do |t|
     t.text     "texte"
@@ -35,22 +35,19 @@ ActiveRecord::Schema.define(version: 20140524213156) do
     t.datetime "updated_at"
   end
 
-  create_table "personnes_scenes", force: true do |t|
-    t.integer  "personne_id"
-    t.integer  "scene_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "personnes_scenes", id: false, force: true do |t|
+    t.integer "personne_id"
+    t.integer "scene_id"
   end
 
   add_index "personnes_scenes", ["personne_id", "scene_id"], name: "index_personnes_scenes_on_personne_id_and_scene_id", unique: true
-  add_index "personnes_scenes", ["personne_id"], name: "index_personnes_scenes_on_personne_id"
-  add_index "personnes_scenes", ["scene_id"], name: "index_personnes_scenes_on_scene_id"
 
   create_table "scenes", force: true do |t|
     t.text     "recit"
     t.string   "lieu"
     t.date     "debut"
     t.date     "fin"
+    t.integer  "chapitre_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
