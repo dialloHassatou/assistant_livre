@@ -6,7 +6,6 @@ class ChapitresController < ApplicationController
   def index
     @chapitres = Chapitre.all
   end
-  params[:chapitre][:anecdote_ids] ||= []
 
   # GET /chapitres/1
   # GET /chapitres/1.json

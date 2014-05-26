@@ -1,4 +1,5 @@
 class CreatePersonnesScenesJoinTable < ActiveRecord::Migration
+<<<<<<< HEAD
   def change
 
 
@@ -6,12 +7,26 @@ class CreatePersonnesScenesJoinTable < ActiveRecord::Migration
 	create_table :personnes_scenes, id: false do |t|
 	t.integer :personne_id
 	t.integer :scene_id
+=======
+  def up
+	create_table :personnes_scenes,  :id => false do |t|
+		t.integer "personne_id"
+		t.integer "scene_id"
+>>>>>>> etape2
         
-        t.timestamps
-  end
+        #t.timestamps
+       end
 
+<<<<<<< HEAD
   
 end
+=======
+       add_index :personnes_scenes,  [:personne_id, :scene_id], unique: true
+  end
+  def down
+	drop_table :personnes_scenes
+  end
+>>>>>>> etape2
 		
   
 
