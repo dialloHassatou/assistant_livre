@@ -20,7 +20,10 @@
         <td><%= link_to 'Show', personne %></td>
         <td><%= link_to 'Edit', edit_personne_path(personne) %></td>
         <td><%= link_to 'Destroy', personne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         
+        <td> <%= link_to 'Ajouter a une scene' %> </td> 
       </tr>
+      
     <% end %>
   </tbody>
 </table>
@@ -28,3 +31,4 @@
 <br>
 
 <%= link_to 'New Personne', new_personne_path %>
+ 

@@ -71,7 +71,7 @@ class PersonnesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def personne_params
-      params.require(:personne).permit(:name)
+   def personne_params
+      params.require(:personne).permit(:name, :scene_ids => [])
     end
 end

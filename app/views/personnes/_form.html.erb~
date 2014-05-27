@@ -19,7 +19,7 @@
    <div class="field">
  <% Scene.all.each do |scene| %>
  <label><%= scene.recit %>
-   <%= check_box_tag "personne[scene_ids][]"%> 
+   <%= check_box_tag "personne[personne_ids][]"%> 
  </label>
  <% end %>
 </div>

@@ -6,7 +6,7 @@ class ChapitresController < ApplicationController
   def index
     @chapitres = Chapitre.all
   end
-  params[:chapitre][:anecdote_ids] ||= []
+  
 
   # GET /chapitres/1
   # GET /chapitres/1.json
@@ -41,6 +41,7 @@ class ChapitresController < ApplicationController
   # PATCH/PUT /chapitres/1
   # PATCH/PUT /chapitres/1.json
   def update
+    params[:chapitre][:anecdote_ids] ||= []
     respond_to do |format|
       if @chapitre.update(chapitre_params)
         format.html { redirect_to @chapitre, notice: 'Chapitre was successfully updated.' }
@@ -71,6 +72,7 @@ class ChapitresController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapitre_params
       params.require(:chapitre).permit(:numero, :titre)
+      
     end
     
 end
