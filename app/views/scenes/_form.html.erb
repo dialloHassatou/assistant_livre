@@ -29,8 +29,10 @@
   </div>
  <div class='field'>
          <%= f.label :Chapitre %><br>
-        <%= collection_select(:anecdote, :chapitre_id, Chapitre.all, :numero, :numero) %>
+        <%= collection_select(:scene, :chapitre_id, Chapitre.all, :numero, :numero) %>
       </div>
+
+
 
  <div class="field">
  <% Personne.all.each do |personne| %>

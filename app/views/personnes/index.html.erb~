@@ -14,7 +14,7 @@
     <% @personnes.each do |personne| %>
       <tr>
         <td><%= personne.name %></td>
-          <% personne.editors.each do |scene| %>
+          <% personne.scenes.each do |scene| %>
         <td><%= scene.chapitre_id %>,</td>
          <% end %>
         <td><%= link_to 'Show', personne %></td>

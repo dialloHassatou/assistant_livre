@@ -23,7 +23,7 @@ describe Personne do
      describe "si le nom  existe deja " do
     before do
 	personne_avec_le_meme_nom = Personne.new(name:"Ping")
-	personne_avec_le_meme_nom
+	personne_avec_le_meme_nom.save
     end
 	
     it { should_not be_valid }

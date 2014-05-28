@@ -1,10 +1,6 @@
-<h1>Editing personne</h1>
+ <h1>Editing personne</h1>
 
 <%= render 'form' %>
 
-<p>Projets :</p><br />
-  <%= collection_select(:personne, :scene_id, @scenes, :id, :recit, {:prompt => " "}, { :multiple => true }) %>
-  
-
-<%= link_to 'Show', @personne %> 
+<%= link_to 'Show', @personne %> |
 <%= link_to 'Back', personnes_path %>

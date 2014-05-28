@@ -16,13 +16,17 @@
     <%= f.text_field :name %>
   </div>
 
-    <% Scene.all.each do |scene| %>
-<label><%= scene.lieu %>
-<%= check_box_tag "personne[scene_ids][]", scene.id, @personne.editors.include?(scene) %>
-</label>
-<% end %>
 
-         
+    <div class="field">
+ <% Scene.all.each do |scene| %>
+ <label><%= scene.lieu %>
+   <%= check_box_tag "personne[scene_ids][]",
+   scene.id,  @personne.scenes.include?(scene)%> 
+ </label>
+ <% end %>
+</div>
+
+     
 
   
   <div class="actions">

@@ -10,11 +10,6 @@ describe Personne do
         it { should respond_to(:name) }
         it { should be_valid }
 
-        describe "si le nom n'est pas present" do
-	  before { @personne.name = "" }
-          it { should_not be_valid }
-	end
-
        describe "si le nom est  trop long" do
      	   before { @personne.name = "a" * 61 }
       	   it { should_not be_valid }
