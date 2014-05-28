@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Scene do
  describe Scene do
   let(:chapitre) { FactoryGirl.create(:chapitre) }
-  before { @scene = chapitre.scenes.build(recit:"Example recit",lieu: "Example lieu",debut: 10-10-2013, fin: 11-11-2013,chapitre_id: 0) }
+  before { @scene = chapitre.scenes.build(recit:"Example recit",lieu: "Example lieu",debut: 10-10-2013, fin: 11-11-2013, chapitre_id: 1) }
 
   subject { @scene }
 

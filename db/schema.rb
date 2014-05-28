@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140524160440) do
     t.text     "texte"
     t.string   "sujet"
     t.string   "theme"
+    t.integer  "chapitre_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140524160440) do
     t.string   "lieu"
     t.date     "debut"
     t.date     "fin"
+    t.integer  "chapitre_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
