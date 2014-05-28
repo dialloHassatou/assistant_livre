@@ -1,3 +1,8 @@
 class Anecdote < ActiveRecord::Base
-	attr_accessor :texte, :sujet, :theme, :numero
+     belongs_to :chapitre,
+:class_name => "Chapitre",
+:foreign_key => "order_id"
+    
+     validates :sujet, :presence => true
+     validates :theme, :presence => true
 end

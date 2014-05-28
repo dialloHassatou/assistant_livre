@@ -29,7 +29,7 @@
   </div>
   <div class="field">
  <% Chapitre.all.each do |chapitre| %>
- <LABEL><%= chapitre.numero %>
+ <label><%= chapitre.numero %>
    <%= check_box_tag "scene[chapitre_ids][]", chapitre.id %> 
  </label>
  <% end %>

@@ -23,14 +23,13 @@
     <%= f.label :theme %><br>
     <%= f.text_field :theme %>
   </div>
+
+   <div class='field'>
+         <%= f.label :theme %><br>
+        <%= collection_select(:anecdote, :chapitre_id, Chapitre.all, :numero, :numero) %>
+      </div>
   
-    <div class="field">
- <% Chapitre.all.each do |chapitre| %>
- <%= f.label :chapitre.numero %>
-   <%= check_box_tag "anecdote[chapitre_ids][]", chapitre.id %> 
- </label>
- <% end %>
- </div>
+    
  
   <div class="actions">
     <%= f.submit %>

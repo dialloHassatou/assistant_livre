@@ -12,6 +12,7 @@ gem 'sass-rails', '~> 4.0.0'
 
 group :development, :test do
   gem 'rspec-rails',      ">= 2.0.0.beta"
+  gem 'rspec-its', '~> 0.0.1.pre'
 end
 
 
@@ -50,4 +51,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'bootstrap-sass', '2.0.4'
+gem 'factory_girl_rails', '4.1.0'
+group :test do
+  gem 'capybara', '2.2.0'
+  gem 'factory_girl_rails', '4.1.0'
+end
+
 

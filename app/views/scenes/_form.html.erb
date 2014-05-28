@@ -27,13 +27,10 @@
     <%= f.label :fin %><br>
     <%= f.date_select :fin %>
   </div>
-  <div class="field">
- <% Chapitre.all.each do |chapitre| %>
- <label><%= chapitre.numero %>
-   <%= check_box_tag "scene[chapitre_ids][]", chapitre.id %> 
- </label>
- <% end %>
- </div>
+ <div class='field'>
+         <%= f.label :Chapitre %><br>
+        <%= collection_select(:anecdote, :chapitre_id, Chapitre.all, :numero, :numero) %>
+      </div>
 
  <div class="field">
  <% Personne.all.each do |personne| %>

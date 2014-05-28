@@ -1,8 +1,9 @@
 class Chapitre < ActiveRecord::Base
-	attr_accessor :name, :email
+	#attr_accessor :name, :email
          
-        validates :titre, :presence => true
-        # validates :numero, numericality: { only_integer: true }
+        validates :titre, :presence => true, length: { maximum: 50 }
+         validates :numero, numericality: { only_integer: true }
+
   	has_many :scenes
         has_many :anecdotes
 end

@@ -3,8 +3,8 @@
 <%= render 'form' %>
 
 <p>Projets :</p><br />
-  <%= collection_select(:personne, :scene_ids, @scenes, :id, :recit, {:prompt => " "}, { :multiple => true })
-  <p>
+  <%= collection_select(:personne, :scene_ids, @scenes, :id, :recit, {:prompt => " "}, { :multiple => true }) %>
+  
 
-<%= link_to 'Show', @personne %> |
+<%= link_to 'Show', @personne %> 
 <%= link_to 'Back', personnes_path %>

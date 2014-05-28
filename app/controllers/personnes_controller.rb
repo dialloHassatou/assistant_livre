@@ -15,13 +15,10 @@ class PersonnesController < ApplicationController
   # GET /personnes/new
   def new
     @personne = Personne.new
-    @scenes = Scene.all
   end
 
   # GET /personnes/1/edit
   def edit
-    @personne = Personne.find(params[:id])
-    @scenes = Scene.find(:all, :order => "nom")
   end
 
   # POST /personnes
@@ -43,6 +40,7 @@ class PersonnesController < ApplicationController
   # PATCH/PUT /personnes/1
   # PATCH/PUT /personnes/1.json
   def update
+    params[:personne][:scene_ids] ||= []
     respond_to do |format|
       if @personne.update(personne_params)
         format.html { redirect_to @personne, notice: 'Personne was successfully updated.' }
@@ -71,7 +69,7 @@ class PersonnesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-   def personne_params
-      params.require(:personne).permit(:name, :scene_ids => [])
+    def personne_params
+      params.require(:personne).permit(:nom, :scene_ids => [])
     end
 end

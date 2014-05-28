@@ -17,7 +17,20 @@ describe Chapitre do
 	  before { @chapitre.titre = "" }
           it { should_not be_valid }
 	end
-   
+
+        describe "si le titre est  trop long" do
+     	   before { @chapitre.titre = "a" * 61 }
+      	   it { should_not be_valid }
+ 	end
+
+   describe "si le numero existe deja " do
+    before do
+	numero_existant = Chapitre.new(numero: 1, titre: "Autrefois")
+	numero_existant.save
+    end
+	
+    it { should_not be_valid }
+  end
 
 end
 
