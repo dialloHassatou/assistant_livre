@@ -1,2 +1,20 @@
-<h1>Page#Acceuil</h1>
-<p>Find me in app/views/page/Acceuil.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assistant d'ecriture</title>
+  </head>
+  <body>
+    <h1>Assistant d'ecriture de livres</h1>
+    <p>
+      
+    </p>
+   
+   
+   <%= link_to "Recapitulatif des chapitres", '/pages/chapitre' %>
+   <%= link_to "Recapitulatif des personage", '/pages/personne' %>
+   
+   
+  
+  </body>
+</html>
+ 

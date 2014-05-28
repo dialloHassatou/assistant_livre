@@ -1,0 +1,30 @@
+<h1>Recapitulation des chapitres</h1>
+
+
+<p>Liste des scenes utilisees dans le chapitre et les personnes correspondantes : </p>
+
+<% Chapitre.all.each do |chapitre| %>  
+  <tr>
+        <td><%= chapitre.numero %></td>
+              <th> </th>
+        <td><%= chapitre.titre %></td>
+</td>
+  
+ <% chapitre.scenes.all.each do |c| %>
+  <%if c.chapitre_id!=[] %>
+ <small>
+ <p> TITRE: <%= link_to chapitre.titre, chapitre %></p>
+
+ <p> Recit de la scene </p>
+  <p><%= link_to c.recit , c %></p> 
+
+  <p> nom des personnes </p>
+   <% c.personnes.all.each do |p| %>
+  <%if p.id!=[] %>
+   <h2><%= link_to p.name, p %></h2>
+ </small>
+  <%end%>
+  <%end%>
+  <%end%>
+  <%end%>
+<%end%>

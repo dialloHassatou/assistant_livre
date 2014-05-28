@@ -1,0 +1,42 @@
+<h1>Liste des Chapitres</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero</th>
+       <th> </th>
+      <th>Titre</th>
+         <th> </th>
+      <th>Anecdote</th>
+      <th> </th>
+      <th> Scene </th>
+      <th></th>
+       <th> Personnage </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chapitres.each do |chapitre| %>
+      <tr>
+        <td><%= chapitre.numero %></td>
+              <th> </th>
+        <td><%= chapitre.titre %></td>
+                  <th> </th>
+        <% chapitre.anecdotes.each do |anecdote| %>
+        <td><%= link_to anecdote.sujet , anecdote %></td>
+         <% end %>
+                  <th> </th>
+        <% chapitre.scenes.each do |scene| %>
+           <td><%= link_to scene.recit, scene %></td>
+             <% end %> 
+                <th> </th>
+      </tr> 
+      
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

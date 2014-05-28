@@ -1,0 +1,20 @@
+require 'spec_helper'
+
+describe "Chapitres"
+     describe "edit" do
+    let(:chapitre) { FactoryGirl.create(:chapitre) }
+    before { visit  edit_chapitre_path(chapitre) }
+
+    describe "page" do
+      it { should have_content("Update your profile") }
+      it { should have_title("Edit user") }
+      it { should have_link('change', href: 'http://gravatar.com/emails') }
+    end
+
+    describe "with invalid information" do
+      before { click_button "Save changes" }
+
+      it { should have_content('error') }
+    end
+  end
+end

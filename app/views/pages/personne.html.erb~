@@ -1,0 +1,35 @@
+<h1>Recapitulation des personnes</h1>
+<p>Personnes qui ne sont encore apparu dans aucune scene : </p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th>Chapitre</th>
+      
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Personne.all.each do |personne| %>  
+     <tr>
+  <td><h2><%= link_to personne.name , personne %> </h2></td>
+       <th></th>
+      <% personne.scenes.each do |scene| %>
+        <td><%=  scene.chapitre_id %></td>
+         <% end %>
+  </tr>
+         <%end%>
+          
+        
+      
+  
+  </tbody>
+</table>
+
+<br>
+
+
+ 

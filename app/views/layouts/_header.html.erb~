@@ -1,11 +1,14 @@
  <header>
         <nav class="round">
           <ul>
-            <li> <%= link_to "Acceuil", '/page/acceuil' %>
+            <li> <%= link_to "Acceuil", '/' %>
             <li><%= link_to "Chapitre", chapitres_path %></li>
             <li><%= link_to "Anecdote", anecdotes_path %></li>
             <li><%= link_to "Scene", scenes_path %></li>
             <li><%= link_to "Personne", personnes_path %></li>
+             <li><%= link_to "Recapitulatif des chapitres", '/pages/chapitre' %></li>
+ 
+  <li> <%= link_to "Recapitulatif des personage", '/pages/personne' %></li>
           </ul>
         </nav>
       </header>

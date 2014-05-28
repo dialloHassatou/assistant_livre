@@ -1,11 +1,15 @@
 AssistantLivre::Application.routes.draw do
   
 
+  get "pages/personne"
+  get "pages/chapitre"
+  get "page/personne"
+  get "page/chapitre"
   get "page/Acceuil"
   resources :personnes
    root :to => 'page#Acceuil'
   resources :scenes
-
+  
   resources :anecdotes
 
   resources :chapitres
